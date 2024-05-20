@@ -1,0 +1,21 @@
+{% extends "master.html" %}
+
+{% block container %}
+  {{messages | pprint}}
+  {% if messages %}
+    <div id="messages">
+      <div id="alert-message" class="alert note alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+      </button>
+      {% for message in messages %}
+        {{ message }}<br/>
+      {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  ( {{ page_obj.start_index }} - {{ page_obj.end_index }} ) / {{ page_obj.paginator.count }}
+  {% block list %}
+  {% endblock list %}
+{% endblock container %}

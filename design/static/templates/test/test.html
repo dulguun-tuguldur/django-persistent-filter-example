@@ -1,0 +1,21 @@
+{% extends "master_list.html" %}
+
+<form action="" method="get" id="filter-form">
+  
+</form>
+{% block title %}
+<div class="title-bar" style="display: inherit;">
+  <h1 class="title-bar-title">
+    <span class="d-ib">Test</span>
+  </h1>
+</div>
+<hr />
+{% endblock %}
+
+
+{% block list %}
+
+<a onclick="return confirm('Are you sure?')" 
+href="{% url 'some-function-view' %}" class="btn btn-danger btn-sm">Some function</a>
+</td>
+{% endblock list %}

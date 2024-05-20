@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>test project</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+    #modules {
+      width: 50%;
+      height:4%;
+      margin:auto;
+      list-style-type: none;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .checkbox-row {
+      width: 50%;
+      padding: 5px;
+      box-sizing: border-box;
+    }
+    </style>
+    {% block css %}
+    {% endblock css %}
+  </head>
+<body class="layout layout-header-fixed">
+
+  <div class="layout-main">
+    <div class="layout-sidebar">
+      <div class="layout-sidebar-backdrop"></div>
+      <div class="layout-sidebar-sticky">
+        <div class="layout-sidebar-body">
+        </div>
+      </div>
+    </div>
+    <div class="layout-content">
+      <div class="layout-content-body">
+        {% block title %}
+          
+        {% endblock title %}
+        
+        {% block container %}
+        
+        {% endblock container %}
+
+      </div>
+    </div>
+  </div>
+  <!-- <script src="{{STATIC_URL}}js/serial.js"></script>
+  <script src="{{STATIC_URL}}js/xy.js"></script> -->
+{% block js %}
+
+{% endblock js %}
+<input type="hidden" id="front_csrf_token" value="{{csrf_token}}" />
+</body>
+</html>
