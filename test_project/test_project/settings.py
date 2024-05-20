@@ -52,7 +52,7 @@ MIDDLEWARE = [
 ]
 
 PERSISTENT_FILTERS_URLS = [
-#   '/test/'
+  '/test/'
 ]
 
 ROOT_URLCONF = 'test_project.urls'
@@ -72,6 +72,9 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+            'libraries': {
+              'core_tags': 'test_project.test_project.core_tags'
+            }
         },
     },
 ]

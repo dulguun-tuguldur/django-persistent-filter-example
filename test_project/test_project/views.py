@@ -18,7 +18,7 @@ class TestView(TemplateView):
   
 def SomeFunctionView(request):
   messages.error(request, 'New error from messages')
-  return HttpResponseRedirect(reverse_lazy('test-list-view'))
+  return HttpResponseRedirect(reverse_lazy('test-list-view') + '?' + request.META['QUERY_STRING'])
 
   # print('referer', request.META['HTTP_REFERER'])
   # print('query', request.META['QUERY_STRING'])

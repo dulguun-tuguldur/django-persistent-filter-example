@@ -14,8 +14,8 @@
 
 
 {% block list %}
-
+{% load core_tags %}
 <a onclick="return confirm('Are you sure?')" 
-href="{% url 'some-function-view' %}" class="btn btn-danger btn-sm">Some function</a>
+href="{% url 'some-function-view' %}?{% query_transform request %}" class="btn btn-danger btn-sm">Some function</a>
 </td>
 {% endblock list %}
