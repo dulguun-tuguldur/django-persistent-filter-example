@@ -21,4 +21,5 @@ pip install -r requirements.txt
 ## Start project
 
 ```
-python test_projc
+python test_project/manage.py runserver
+```
