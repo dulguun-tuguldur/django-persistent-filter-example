@@ -15,7 +15,9 @@
 
 {% block list %}
 
-<a onclick="return confirm('Are you sure?')" 
-href="{% url 'some-function-view' %}" class="btn btn-danger btn-sm">Some function</a>
+<a href="{% url 'test-list-view' %}?test=test">Add query param</a>
+<br />
+
+<a href="{% url 'some-function-view' %}" class="btn btn-danger btn-sm">Some function</a>
 </td>
 {% endblock list %}

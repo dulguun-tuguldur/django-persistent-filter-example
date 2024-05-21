@@ -11,8 +11,8 @@ class TestView(TemplateView):
   
   def get_context_data(self, **kwargs):
     ctx = super(TestView, self).get_context_data(**kwargs)
-    messages.info(self.request, "initial message from messages")
-    print ('123')
+    # messages.info(self.request, "initial message from messages")
+    # print ('123')
     return ctx
   
   
